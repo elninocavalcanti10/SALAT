@@ -34,13 +34,26 @@ public class WebTesterTest {
     public void after() {
         webDriver.close();
     }    
-    
+    /*
     @Test
     public void test01() {
         //Driver driver = new WebAppDriver(webDriver, "http://portal.utfpr.edu.br/", "utfpr.edu.br");       
         //Driver driver = new WebAppDriver(webDriver, "https://www.wikipedia.org/", "wikipedia.org");   
         //Driver driver = new WebAppDriver(webDriver, "http://localhost:8080", "localhost:8080");       
         Driver driver = new WebAppDriver(webDriver, "http://demo.redmine.org", "demo.redmine.org");
+        //Driver driver = new WebAppDriver(webDriver, "http://demo.guru99.com/", "demo.guru99.com");       
+        
+        StopCondition stopCondition = new CounterStopCondition(200);
+        Tester tester = new Tester(driver, stopCondition, new Random());
+        tester.executeRandomTest();
+    }
+    */
+    @Test
+    public void test02() {
+        Driver driver = new WebAppDriver(webDriver, "http://portal.utfpr.edu.br/", "utfpr.edu.br");       
+        //Driver driver = new WebAppDriver(webDriver, "https://www.wikipedia.org/", "wikipedia.org");   
+        //Driver driver = new WebAppDriver(webDriver, "http://localhost:8080", "localhost:8080");       
+        //Driver driver = new WebAppDriver(webDriver, "http://demo.redmine.org", "demo.redmine.org");
         //Driver driver = new WebAppDriver(webDriver, "http://demo.guru99.com/", "demo.guru99.com");       
         
         StopCondition stopCondition = new CounterStopCondition(200);
